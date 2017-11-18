@@ -1,4 +1,4 @@
-package com.gerardocamilo;
+package com.gerardocamilo.springdemo;
 
 public class BaseballCoach implements Coach{
 

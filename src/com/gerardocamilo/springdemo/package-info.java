@@ -5,4 +5,4 @@
  * @author gerardocamilo
  *
  */
-package com.gerardocamilo;
+package com.gerardocamilo.springdemo;
