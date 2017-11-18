@@ -17,6 +17,8 @@
     
     <bean id="myCricketCoach" class="com.gerardocamilo.springdemo.CricketCoach">
     	<property name="fortuneService" ref="myFortuneService"></property>
+    	<property name="email" value="test.mail@gmail.com"></property>
+    	<property name="team" value="Sunrisers Santo Domingo"></property>
     </bean>
 </beans>
 
