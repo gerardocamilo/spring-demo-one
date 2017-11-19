@@ -12,6 +12,7 @@
 
     <!-- Define your beans here -->
     <bean id="myFortuneService" class="com.gerardocamilo.springdemo.HappyFortuneService"></bean>
+    <bean id="myRandomFortuneService" class="com.gerardocamilo.springdemo.RandomFortuneService"></bean>
     
     
     <bean id="myCoach" class="com.gerardocamilo.springdemo.TrackCoach">
@@ -20,7 +21,7 @@
     </bean>
     
     <bean id="myCricketCoach" class="com.gerardocamilo.springdemo.CricketCoach">
-    	<property name="fortuneService" ref="myFortuneService"></property>
+    	<property name="fortuneService" ref="myRandomFortuneService"></property>
     	<property name="email" value="${cricket.coach.email}"></property>
     	<property name="team" value="${cricket.coach.team}"></property>
     </bean>
