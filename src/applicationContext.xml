@@ -7,8 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- load properties file: sport.properties -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+
     <!-- Define your beans here -->
     <bean id="myFortuneService" class="com.gerardocamilo.springdemo.HappyFortuneService"></bean>
+    
     
     <bean id="myCoach" class="com.gerardocamilo.springdemo.TrackCoach">
     	<!-- Constructor injection  -->
@@ -17,8 +21,8 @@
     
     <bean id="myCricketCoach" class="com.gerardocamilo.springdemo.CricketCoach">
     	<property name="fortuneService" ref="myFortuneService"></property>
-    	<property name="email" value="test.mail@gmail.com"></property>
-    	<property name="team" value="Sunrisers Santo Domingo"></property>
+    	<property name="email" value="${cricket.coach.email}"></property>
+    	<property name="team" value="${cricket.coach.team}"></property>
     </bean>
 </beans>
 
