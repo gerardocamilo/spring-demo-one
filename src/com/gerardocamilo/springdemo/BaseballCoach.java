@@ -22,4 +22,11 @@ public class BaseballCoach implements Coach{
 		return this.theFortuneService.getFortune();
 	}
 	
+	public void init(){
+		System.out.println("\nBaseballCoach: inside method - init");
+	}
+	
+	public void dispose(){
+		System.out.println("\nBaseballCoach: inside method - dispose");
+	}
 }

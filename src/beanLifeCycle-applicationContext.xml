@@ -10,7 +10,14 @@
     <!-- Define your beans here -->
     <bean id="myFortuneService" class="com.gerardocamilo.springdemo.HappyFortuneService"></bean>
     
-    <bean id="myCoach" class="com.gerardocamilo.springdemo.TrackCoach" scope="prototype">
+    <bean id="myCoach" class="com.gerardocamilo.springdemo.TrackCoach" scope="singleton" init-method="doMyStartupStuff" 
+    	destroy-method="doMyCleanupStuff">
+    	<!-- Constructor injection  -->
+    	<constructor-arg ref="myFortuneService"></constructor-arg>
+    </bean>
+
+    <bean id="myBaseballCoach" class="com.gerardocamilo.springdemo.BaseballCoach" scope="singleton" init-method="init" 
+    	destroy-method="dispose">
     	<!-- Constructor injection  -->
     	<constructor-arg ref="myFortuneService"></constructor-arg>
     </bean>

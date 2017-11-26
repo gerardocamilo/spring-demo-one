@@ -22,4 +22,14 @@ public class TrackCoach implements Coach {
 		return this.myFortuneService.getFortune();
 	}
 
+	// add an init method
+	public void doMyStartupStuff(){
+		System.out.println("TrackCoach: inside method - doMyStartupStuff");
+	}
+	
+	// add an cleanup method
+	/* For "prototype" scoped beans, Spring does not call the @PreDestroy (destroy-method) method. */
+	public void doMyCleanupStuff(){
+		System.out.println("TrackCoach: inside method - doMyCleanupStuff");
+	}	
 }
