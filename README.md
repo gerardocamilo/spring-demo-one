@@ -1,6 +1,3 @@
-# spring-demo-one
-Playing around with Spring
+# Playing around with Spring
 
-This repo includes:
-
-- Inversion of Control, Dependency Injection, Bean Scopes and Lifecycle implementations using XML configuration files.
+This repo includes the implementation of the following concepts: Inversion of Control, Dependency Injection, Bean Scopes and Lifecycle using XML configuration files.
